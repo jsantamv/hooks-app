@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Messeage } from './Messeage'
+
 import './effects.css'
 
 
@@ -12,6 +14,7 @@ export const SimpleForm = () => {
     })
 
     const { name, email } = formState
+
 
     useEffect(() => {
         //        console.log("hey");
@@ -55,7 +58,7 @@ export const SimpleForm = () => {
                 />
 
             </div>
-
+            <br />
             <div className="form-group">
                 <input
                     type="text"
@@ -69,7 +72,10 @@ export const SimpleForm = () => {
 
             </div>
 
+            <br />
 
+            { name === '123' && <Messeage />}
+            
         </>
     )
 }
